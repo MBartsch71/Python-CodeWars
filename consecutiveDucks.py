@@ -1,26 +1,10 @@
 def consec(n):
-    sum = 0
-    start = 1
-    end = n
-    found = False
-    while found == False:
-        if start == n:
-            break
-        for number in range(start, end):
-            printf('start: {0}', start)
-            found = False
-            sum += number
-            if sum > n:
-                print(sum)
-                break
-            elif sum == n:
-                found = True
-        if found == True:
-            print(start, number)
-        else:
-            start += 1
-            sum = 0
-            print(start)
+    while n % 2 == 0 and n > 1:
+        n //= 2
+    if n > 1:
+        return True
+    elif n == 1:
+        return False
 
 
-print(consec(42))
+print(consec(382131))
